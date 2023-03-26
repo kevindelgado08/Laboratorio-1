@@ -1,0 +1,11 @@
+<circuit noLinAcc="5" Speed_sps="1000000" Speed_per="100" Simu_Step_nS="1000" type="simulide_0.4" reactStep="50" animate="0">
+
+Unique  Id: Seven Segment-12: 
+Circuit Id: Seven Segment-12
+<item MaxCurrent="0.02" id="Seven Segment-12" Threshold="2.4" valLabelx="0" labelx="20" valLabRot="0" valLabely="0" objectName="Seven Segment-12" boardRot="-1e+06" y="-356" CommonCathode="true" circRot="0" boardPos="-1e+06,-1e+06" mainComp="false" circPos="0,0" labelrot="0" x="-256" vflip="1" labely="-44" Show_id="false" itemtype="Seven Segment" Vertical_Pins="false" NumDisplays="2" rotation="0" Color="0" hflip="1" Resistance="1"/>
+
+Unique  Id: pic12f683-10: 
+Circuit Id: pic12f683-10
+<item eeprom="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" id="pic12f683-10" Mhz="20" valLabelx="0" labelx="0" valLabRot="0" valLabely="0" objectName="pic12f683-10" Name="" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," boardRot="-1e+06" y="-372" Program="" circRot="nan" Auto_Load="false" boardPos="-1e+06,-1e+06" mainComp="false" circPos="0,0" labelrot="0" x="-400" vflip="1" labely="-20" Show_id="true" itemtype="PIC" Logic_Symbol="false" rotation="0" hflip="1"/>
+ 
+</circuit>
