@@ -1,5 +1,5 @@
 #include <pic14/pic12f683.h>
- 
+
 //To compile:
 //sdcc -mpic14 -p16f683 bingo.c
  
@@ -22,7 +22,7 @@
 //pk2cmd -M -PPIC16f887 -Fbingo.hex
 
 
-const char num_entero[] = {
+const char num_decena[] = {
     0b00000000, // 0
     0b00000001, // 1
     0b00000010, // 2
@@ -35,7 +35,7 @@ const char num_entero[] = {
     0b00010001, // 9
 };
 
-const char num_decimal[] = {
+const char num_unidad[] = {
     0b00100000, // 0
     0b00100001, // 1
     0b00100010, // 2
@@ -48,6 +48,15 @@ const char num_decimal[] = {
     0b00110001, // 9
 };
 
+int unidad(int numero){
+	int unidades = numero%10;
+	return unidades;
+}
+
+int decena(int numero){
+	int decenas= numero/10;
+	return decenas;
+}
 
 void delay (unsigned inttiempo);
  
@@ -56,12 +65,14 @@ void main(void)
     TRISIO = 0b00000000; //Poner todos los pines como salidas
 	
 	unsigned int time= 50;
-	
+
+
+	int x = decena(55);
+	int y = unidad(55);
 	while (1)
 	{
-		GPIO = num_entero[9];
-		GPIO = num_decimal[2];
-			
+		GPIO = num_decena[x];
+		GPIO = num_unidad[y];
 	}
 	
 	

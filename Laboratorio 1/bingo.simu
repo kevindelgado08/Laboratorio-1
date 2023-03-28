@@ -1,171 +1,171 @@
-<circuit reactStep="50" noLinAcc="5" type="simulide_0.4" Speed_per="100" Simu_Step_nS="1000" Speed_sps="1000000" animate="0">
+<circuit noLinAcc="5" Simu_Step_nS="1000" Speed_per="100" reactStep="50" Speed_sps="1000000" type="simulide_0.4" animate="0">
 
 Unique  Id: Fixed Voltage-584: 
 Circuit Id: Fixed Voltage-584
-<item valLabRot="0" id="Fixed Voltage-584" hflip="1" labely="-24" x="-492" mainComp="false" Voltage="5" vflip="1" labelrot="0" y="-392" valLabelx="-16" circPos="0,0" circRot="80" labelx="-64" Out="true" objectName="Fixed Voltage-584" Show_id="false" rotation="0" itemtype="Fixed Voltage" boardRot="-1e+06" valLabely="8" boardPos="-1e+06,-1e+06" Show_Volt="true" Unit=" V"/>
+<item valLabelx="-16" Voltage="5" Show_id="false" rotation="0" objectName="Fixed Voltage-584" itemtype="Fixed Voltage" id="Fixed Voltage-584" valLabely="8" x="-492" valLabRot="0" labely="-24" circRot="80" y="-392" boardRot="-1e+06" labelx="-64" Unit=" V" labelrot="0" circPos="0,0" vflip="1" hflip="1" Show_Volt="true" Out="true" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Demux-177: 
 Circuit Id: Demux-177
-<item valLabRot="0" id="Demux-177" Input_Imped="1e+14" hflip="1" labely="-24" Inverted="false" Out_High_V="5" x="-376" Address_Bits="1" Tristate="true" mainComp="false" Input_High_V="2.5" Out_Low_V="0" vflip="1" Out_Imped="40" labelrot="0" y="-344" valLabelx="0" circPos="0,0" circRot="8.455599822928062e-307" labelx="-16" objectName="Demux-177" Show_id="false" rotation="0" itemtype="Demux" boardRot="-1e+06" valLabely="0" Input_Low_V="2.5" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Inverted="false" Address_Bits="1" Show_id="false" rotation="0" objectName="Demux-177" itemtype="Demux" Out_Imped="40" id="Demux-177" valLabely="0" x="-376" Input_Low_V="2.5" valLabRot="0" labely="-24" circRot="8.455599822928062e-307" y="-344" Input_Imped="1e+14" Out_Low_V="0" boardRot="-1e+06" labelx="-16" Tristate="true" labelrot="0" circPos="0,0" vflip="1" Input_High_V="2.5" Out_High_V="5" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Push-173: 
 Circuit Id: Push-173
-<item valLabRot="0" id="Push-173" Norm_Close="false" hflip="1" labely="-24" x="-436" mainComp="false" vflip="1" Key="" labelrot="0" y="-392" Poles="1" valLabelx="0" circPos="0,0" circRot="-9.479791995597153e+306" labelx="-16" objectName="Push-173" Show_id="false" rotation="0" itemtype="Push" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Push-173" itemtype="Push" Norm_Close="false" id="Push-173" valLabely="0" x="-436" Poles="1" valLabRot="0" labely="-24" Key="" circRot="-9.479791995597153e+306" y="-392" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Ground-165: 
 Circuit Id: Ground-165
-<item valLabRot="0" id="Ground-165" hflip="1" labely="8" x="-216" mainComp="false" vflip="1" labelrot="0" y="-240" valLabelx="0" circPos="0,0" circRot="7.565991271056531e-307" labelx="-16" objectName="Ground-165" Show_id="false" rotation="0" itemtype="Ground" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Ground-165" itemtype="Ground" id="Ground-165" valLabely="0" x="-216" valLabRot="0" labely="8" circRot="7.565991271056531e-307" y="-240" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: BJT-163: 
 Circuit Id: BJT-163
-<item valLabRot="0" id="BJT-163" hflip="1" labely="0" PNP="false" x="-224" mainComp="false" vflip="1" labelrot="0" y="-284" valLabelx="0" circPos="0,0" circRot="-5.486129290484183e+303" labelx="18" objectName="BJT-163" Show_id="false" Gain="100" rotation="0" itemtype="BJT" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="BJT-163" itemtype="BJT" PNP="false" id="BJT-163" valLabely="0" x="-224" valLabRot="0" labely="0" circRot="-5.486129290484183e+303" y="-284" boardRot="-1e+06" labelx="18" labelrot="0" circPos="0,0" Gain="100" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Ground-161: 
 Circuit Id: Ground-161
-<item valLabRot="0" id="Ground-161" hflip="1" labely="8" x="-248" mainComp="false" vflip="1" labelrot="0" y="-300" valLabelx="0" circPos="0,0" circRot="1.112612982618897e-306" labelx="-16" objectName="Ground-161" Show_id="false" rotation="0" itemtype="Ground" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Ground-161" itemtype="Ground" id="Ground-161" valLabely="0" x="-248" valLabRot="0" labely="8" circRot="1.112612982618897e-306" y="-300" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: BJT-157: 
 Circuit Id: BJT-157
-<item valLabRot="0" id="BJT-157" hflip="1" labely="0" PNP="false" x="-256" mainComp="false" vflip="1" labelrot="0" y="-352" valLabelx="0" circPos="0,0" circRot="1.390671161567e-309" labelx="18" objectName="BJT-157" Show_id="false" Gain="100" rotation="0" itemtype="BJT" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="BJT-157" itemtype="BJT" PNP="false" id="BJT-157" valLabely="0" x="-256" valLabRot="0" labely="0" circRot="1.390671161567e-309" y="-352" boardRot="-1e+06" labelx="18" labelrot="0" circPos="0,0" Gain="100" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Seven Segment-129: 
 Circuit Id: Seven Segment-28
-<item valLabRot="0" id="Seven Segment-28" Vertical_Pins="false" hflip="1" labely="-44" x="-256" MaxCurrent="0.02" mainComp="false" CommonCathode="true" vflip="1" labelrot="0" y="-468" Threshold="2.4" valLabelx="0" circPos="0,0" circRot="4.24399158326e-313" labelx="20" objectName="Seven Segment-129" NumDisplays="2" Show_id="false" Resistance="1" rotation="0" itemtype="Seven Segment" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" Color="1"/>
+<item valLabelx="0" NumDisplays="2" Show_id="false" rotation="0" objectName="Seven Segment-129" itemtype="Seven Segment" id="Seven Segment-28" valLabely="0" CommonCathode="true" x="-256" valLabRot="0" labely="-44" circRot="4.24399158326e-313" y="-468" boardRot="-1e+06" Threshold="2.4" labelx="20" MaxCurrent="0.02" labelrot="0" Color="1" circPos="0,0" Vertical_Pins="false" vflip="1" Resistance="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: pic12f683-10: 
 Circuit Id: pic12f683-10
-<item valLabRot="0" id="pic12f683-10" hflip="1" labely="-20" x="-488" eeprom="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" Auto_Load="true" mainComp="false" vflip="1" Program="bingo.hex" labelrot="0" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," y="-492" valLabelx="0" circPos="0,0" circRot="nan" labelx="0" Logic_Symbol="false" objectName="pic12f683-10" Show_id="true" Mhz="20" Name="" rotation="0" itemtype="PIC" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" varList=",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,," eeprom="0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0" Show_id="true" rotation="0" objectName="pic12f683-10" itemtype="PIC" Auto_Load="true" id="pic12f683-10" valLabely="0" x="-488" Name="" valLabRot="0" labely="-20" circRot="nan" y="-492" Mhz="20" boardRot="-1e+06" labelx="0" Logic_Symbol="false" Program="bingo.hex" labelrot="0" circPos="0,0" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Ground-16: 
 Circuit Id: Ground-129
-<item valLabRot="0" id="Ground-129" hflip="1" labely="8" x="-380" mainComp="false" vflip="1" labelrot="0" y="-536" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" objectName="Ground-16" Show_id="false" rotation="180" itemtype="Ground" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Show_id="false" rotation="180" objectName="Ground-16" itemtype="Ground" id="Ground-129" valLabely="0" x="-380" valLabRot="0" labely="8" circRot="0" y="-536" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: BcdTo7S-23: 
 Circuit Id: BcdTo7S-106
-<item valLabRot="0" id="BcdTo7S-106" Input_Imped="1e+14" hflip="1" labely="-24" Inverted="false" Out_High_V="5" x="-372" Tristate="true" mainComp="false" Input_High_V="2.5" Out_Low_V="0" vflip="1" Out_Imped="40" labelrot="0" y="-468" valLabelx="0" circPos="0,0" circRot="1.390671161567e-309" labelx="-16" objectName="BcdTo7S-23" Show_id="false" rotation="0" itemtype="BcdTo7S" boardRot="-1e+06" valLabely="0" Input_Low_V="2.5" boardPos="-1e+06,-1e+06"/>
+<item valLabelx="0" Inverted="false" Show_id="false" rotation="0" objectName="BcdTo7S-23" itemtype="BcdTo7S" Out_Imped="40" id="BcdTo7S-106" valLabely="0" x="-372" Input_Low_V="2.5" valLabRot="0" labely="-24" circRot="1.390671161567e-309" y="-468" Input_Imped="1e+14" Out_Low_V="0" boardRot="-1e+06" labelx="-16" Tristate="true" labelrot="0" circPos="0,0" vflip="1" Input_High_V="2.5" Out_High_V="5" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: ResistorDip-98: 
 Circuit Id: ResistorDip-98
-<item valLabRot="90" id="ResistorDip-98" hflip="1" labely="-40" Show_res="true" x="-320" mainComp="false" vflip="1" labelrot="0" y="-468" valLabelx="5" circPos="0,0" circRot="-5.486573998259692e+303" labelx="-24" objectName="ResistorDip-98" Show_id="false" Resistance="50" rotation="0" itemtype="ResistorDip" boardRot="-1e+06" Size="7" valLabely="-26" boardPos="-1e+06,-1e+06" Unit=" Ω"/>
+<item valLabelx="5" Show_id="false" Show_res="true" rotation="0" objectName="ResistorDip-98" itemtype="ResistorDip" id="ResistorDip-98" valLabely="-26" x="-320" valLabRot="90" labely="-40" circRot="-5.486573998259692e+303" y="-468" boardRot="-1e+06" labelx="-24" Unit=" Ω" labelrot="0" circPos="0,0" vflip="1" Resistance="50" Size="7" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Fixed Voltage-221: 
 Circuit Id: Fixed Voltage-221
-<item valLabRot="0" id="Fixed Voltage-221" hflip="1" labely="-24" x="-444" mainComp="false" Voltage="5" vflip="1" labelrot="0" y="-344" valLabelx="-16" circPos="0,0" circRot="0" labelx="-64" Out="true" objectName="Fixed Voltage-221" Show_id="false" rotation="0" itemtype="Fixed Voltage" boardRot="-1e+06" valLabely="8" boardPos="-1e+06,-1e+06" Show_Volt="true" Unit=" V"/>
+<item valLabelx="-16" Voltage="5" Show_id="false" rotation="0" objectName="Fixed Voltage-221" itemtype="Fixed Voltage" id="Fixed Voltage-221" valLabely="8" x="-444" valLabRot="0" labely="-24" circRot="0" y="-344" boardRot="-1e+06" labelx="-64" Unit=" V" labelrot="0" circPos="0,0" vflip="1" hflip="1" Show_Volt="true" Out="true" boardPos="-1e+06,-1e+06" mainComp="false"/>
 
 Unique  Id: Connector-48: 
 Circuit Id: Connector-133
-<item valLabRot="0" id="Connector-133" hflip="1" labely="-24" x="-380" mainComp="false" vflip="1" labelrot="0" y="-520" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-380,-520,-380,-508" objectName="Connector-48" Show_id="false" endpinid="BcdTo7S-23-in4" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Ground-16-Gnd" enodeid="Circ_eNode-553"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-48" itemtype="Connector" enodeid="Circ_eNode-585" id="Connector-133" endpinid="BcdTo7S-23-in4" valLabely="0" x="-380" valLabRot="0" labely="-24" circRot="0" y="-520" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-380,-520,-380,-508" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Ground-16-Gnd"/>
 
 Unique  Id: Connector-122: 
 Circuit Id: Connector-122
-<item valLabRot="0" id="Connector-122" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-492" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-348,-492,-336,-492" objectName="Connector-122" Show_id="false" endpinid="ResistorDip-98-resistor0-ePin0" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out0" enodeid="Circ_eNode-554"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-122" itemtype="Connector" enodeid="Circ_eNode-586" id="Connector-122" endpinid="ResistorDip-98-resistor0-ePin0" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-492" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-492,-336,-492" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out0"/>
 
 Unique  Id: Connector-123: 
 Circuit Id: Connector-123
-<item valLabRot="0" id="Connector-123" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-484" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-348,-484,-336,-484" objectName="Connector-123" Show_id="false" endpinid="ResistorDip-98-resistor1-ePin2" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out1" enodeid="Circ_eNode-555"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-123" itemtype="Connector" enodeid="Circ_eNode-587" id="Connector-123" endpinid="ResistorDip-98-resistor1-ePin2" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="0" y="-484" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-484,-336,-484" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out1"/>
 
 Unique  Id: Connector-124: 
 Circuit Id: Connector-124
-<item valLabRot="0" id="Connector-124" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-476" valLabelx="0" circPos="0,0" circRot="9.744983149811976e-239" labelx="-16" pointList="-348,-476,-336,-476" objectName="Connector-124" Show_id="false" endpinid="ResistorDip-98-resistor2-ePin4" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out2" enodeid="Circ_eNode-556"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-124" itemtype="Connector" enodeid="Circ_eNode-588" id="Connector-124" endpinid="ResistorDip-98-resistor2-ePin4" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="9.744983149811976e-239" y="-476" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-476,-336,-476" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out2"/>
 
 Unique  Id: Connector-125: 
 Circuit Id: Connector-125
-<item valLabRot="0" id="Connector-125" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-468" valLabelx="0" circPos="0,0" circRot="2.0711047564813034e-238" labelx="-16" pointList="-348,-468,-336,-468" objectName="Connector-125" Show_id="false" endpinid="ResistorDip-98-resistor3-ePin6" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out3" enodeid="Circ_eNode-557"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-125" itemtype="Connector" enodeid="Circ_eNode-589" id="Connector-125" endpinid="ResistorDip-98-resistor3-ePin6" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="2.0711047564813034e-238" y="-468" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-468,-336,-468" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out3"/>
 
 Unique  Id: Connector-126: 
 Circuit Id: Connector-126
-<item valLabRot="0" id="Connector-126" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-460" valLabelx="0" circPos="0,0" circRot="2.0747134019397398e-238" labelx="-16" pointList="-348,-460,-336,-460" objectName="Connector-126" Show_id="false" endpinid="ResistorDip-98-resistor4-ePin8" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out4" enodeid="Circ_eNode-558"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-126" itemtype="Connector" enodeid="Circ_eNode-590" id="Connector-126" endpinid="ResistorDip-98-resistor4-ePin8" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="2.0747134019397398e-238" y="-460" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-460,-336,-460" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out4"/>
 
 Unique  Id: Connector-127: 
 Circuit Id: Connector-127
-<item valLabRot="0" id="Connector-127" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-452" valLabelx="0" circPos="0,0" circRot="2.0732371378885613e-238" labelx="-16" pointList="-348,-452,-336,-452" objectName="Connector-127" Show_id="false" endpinid="ResistorDip-98-resistor5-ePin10" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out5" enodeid="Circ_eNode-559"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-127" itemtype="Connector" enodeid="Circ_eNode-591" id="Connector-127" endpinid="ResistorDip-98-resistor5-ePin10" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="2.0732371378885613e-238" y="-452" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-452,-336,-452" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out5"/>
 
 Unique  Id: Connector-128: 
 Circuit Id: Connector-128
-<item valLabRot="0" id="Connector-128" hflip="1" labely="-24" x="-348" mainComp="false" vflip="1" labelrot="0" y="-444" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-348,-444,-336,-444" objectName="Connector-128" Show_id="false" endpinid="ResistorDip-98-resistor6-ePin12" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-out6" enodeid="Circ_eNode-560"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-128" itemtype="Connector" enodeid="Circ_eNode-592" id="Connector-128" endpinid="ResistorDip-98-resistor6-ePin12" valLabely="0" x="-348" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-444" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-348,-444,-336,-444" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-out6"/>
 
 Unique  Id: Connector-136: 
 Circuit Id: Connector-136
-<item valLabRot="0" id="Connector-136" hflip="1" labely="-24" x="-280" mainComp="false" vflip="1" labelrot="0" y="-484" valLabelx="0" circPos="0,0" circRot="-5.54095603054026e-310" labelx="-16" pointList="-280,-484,-304,-484" objectName="Connector-136" Show_id="false" endpinid="ResistorDip-98-resistor1-ePin3" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Seven Segment-129-pin_b" enodeid="Circ_eNode-561"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-136" itemtype="Connector" enodeid="Circ_eNode-593" id="Connector-136" endpinid="ResistorDip-98-resistor1-ePin3" valLabely="0" x="-280" valLabRot="0" labely="-24" circRot="-5.54095603054026e-310" y="-484" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-280,-484,-304,-484" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Seven Segment-129-pin_b"/>
 
 Unique  Id: Connector-137: 
 Circuit Id: Connector-137
-<item valLabRot="0" id="Connector-137" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-476" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-304,-476,-280,-476" objectName="Connector-137" Show_id="false" endpinid="Seven Segment-129-pin_c" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor2-ePin5" enodeid="Circ_eNode-562"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-137" itemtype="Connector" enodeid="Circ_eNode-594" id="Connector-137" endpinid="Seven Segment-129-pin_c" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-476" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-476,-280,-476" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor2-ePin5"/>
 
 Unique  Id: Connector-139: 
 Circuit Id: Connector-139
-<item valLabRot="0" id="Connector-139" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-460" valLabelx="0" circPos="0,0" circRot="2.716154612436e-312" labelx="-16" pointList="-304,-460,-280,-460" objectName="Connector-139" Show_id="false" endpinid="Seven Segment-129-pin_e" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor4-ePin9" enodeid="Circ_eNode-563"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-139" itemtype="Connector" enodeid="Circ_eNode-595" id="Connector-139" endpinid="Seven Segment-129-pin_e" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="2.716154612436e-312" y="-460" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-460,-280,-460" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor4-ePin9"/>
 
 Unique  Id: Connector-140: 
 Circuit Id: Connector-140
-<item valLabRot="0" id="Connector-140" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-452" valLabelx="0" circPos="0,0" circRot="7.291122046824043e-304" labelx="-16" pointList="-304,-452,-280,-452" objectName="Connector-140" Show_id="false" endpinid="Seven Segment-129-pin_f" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor5-ePin11" enodeid="Circ_eNode-564"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-140" itemtype="Connector" enodeid="Circ_eNode-596" id="Connector-140" endpinid="Seven Segment-129-pin_f" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="7.291122046824043e-304" y="-452" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-452,-280,-452" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor5-ePin11"/>
 
 Unique  Id: Connector-141: 
 Circuit Id: Connector-141
-<item valLabRot="0" id="Connector-141" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-444" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-304,-444,-280,-444" objectName="Connector-141" Show_id="false" endpinid="Seven Segment-129-pin_g" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor6-ePin13" enodeid="Circ_eNode-565"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-141" itemtype="Connector" enodeid="Circ_eNode-597" id="Connector-141" endpinid="Seven Segment-129-pin_g" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-444" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-444,-280,-444" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor6-ePin13"/>
 
 Unique  Id: Connector-155: 
 Circuit Id: Connector-155
-<item valLabRot="0" id="Connector-155" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-492" valLabelx="0" circPos="0,0" circRot="1.117442870885635e-288" labelx="-16" pointList="-304,-492,-280,-492" objectName="Connector-155" Show_id="false" endpinid="Seven Segment-129-pin_a" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor0-ePin1" enodeid="Circ_eNode-566"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-155" itemtype="Connector" enodeid="Circ_eNode-598" id="Connector-155" endpinid="Seven Segment-129-pin_a" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="1.117442870885635e-288" y="-492" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-492,-280,-492" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor0-ePin1"/>
 
 Unique  Id: Connector-130: 
 Circuit Id: Connector-130
-<item valLabRot="0" id="Connector-130" hflip="1" labely="-24" x="-248" mainComp="false" vflip="1" labelrot="0" y="-436" valLabelx="0" circPos="0,0" circRot="1.2461146980886893e-306" labelx="-16" pointList="-248,-436,-248,-368" objectName="Connector-130" Show_id="false" endpinid="BJT-157-collector" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Seven Segment-129-pin_commona" enodeid="Circ_eNode-567"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-130" itemtype="Connector" enodeid="Circ_eNode-599" id="Connector-130" endpinid="BJT-157-collector" valLabely="0" x="-248" valLabRot="0" labely="-24" circRot="1.2461146980886893e-306" y="-436" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-248,-436,-248,-368" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Seven Segment-129-pin_commona"/>
 
 Unique  Id: Connector-219: 
 Circuit Id: Connector-219
-<item valLabRot="0" id="Connector-219" hflip="1" labely="-24" x="-216" mainComp="false" vflip="1" labelrot="0" y="-300" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-216,-300,-216,-436" objectName="Connector-219" Show_id="false" endpinid="Seven Segment-129-pin_commonb" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BJT-163-collector" enodeid="Circ_eNode-569"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-219" itemtype="Connector" enodeid="Circ_eNode-600" id="Connector-219" endpinid="Seven Segment-129-pin_commonb" valLabely="0" x="-216" valLabRot="0" labely="-24" circRot="0" y="-300" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-216,-300,-216,-436" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BJT-163-collector"/>
 
 Unique  Id: Connector-205: 
 Circuit Id: Connector-205
-<item valLabRot="0" id="Connector-205" hflip="1" labely="-24" x="-352" mainComp="false" vflip="1" labelrot="0" y="-344" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-352,-344,-292,-344,-292,-284,-240,-284" objectName="Connector-205" Show_id="false" endpinid="BJT-163-base" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Demux-177-out1" enodeid="Circ_eNode-570"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-205" itemtype="Connector" enodeid="Circ_eNode-601" id="Connector-205" endpinid="BJT-163-base" valLabely="0" x="-352" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-344" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-352,-344,-292,-344,-292,-284,-240,-284" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Demux-177-out1"/>
 
 Unique  Id: Connector-166: 
 Circuit Id: Connector-166
-<item valLabRot="0" id="Connector-166" hflip="1" labely="-24" x="-216" mainComp="false" vflip="1" labelrot="0" y="-268" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-216,-268,-216,-256" objectName="Connector-166" Show_id="false" endpinid="Ground-165-Gnd" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BJT-163-emiter" enodeid="Circ_eNode-571"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-166" itemtype="Connector" enodeid="Circ_eNode-602" id="Connector-166" endpinid="Ground-165-Gnd" valLabely="0" x="-216" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-268" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-216,-268,-216,-256" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BJT-163-emiter"/>
 
 Unique  Id: Connector-162: 
 Circuit Id: Connector-162
-<item valLabRot="0" id="Connector-162" hflip="1" labely="-24" x="-248" mainComp="false" vflip="1" labelrot="0" y="-336" valLabelx="0" circPos="0,0" circRot="1.1126027971323398e-306" labelx="-16" pointList="-248,-336,-248,-316" objectName="Connector-162" Show_id="false" endpinid="Ground-161-Gnd" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BJT-157-emiter" enodeid="Circ_eNode-572"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-162" itemtype="Connector" enodeid="Circ_eNode-603" id="Connector-162" endpinid="Ground-161-Gnd" valLabely="0" x="-248" valLabRot="0" labely="-24" circRot="1.1126027971323398e-306" y="-336" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-248,-336,-248,-316" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BJT-157-emiter"/>
 
 Unique  Id: Connector-277: 
 Circuit Id: Connector-277
-<item valLabRot="0" id="Connector-277" hflip="1" labely="-24" x="-376" mainComp="false" vflip="1" labelrot="0" y="-320" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-376,-320,-376,-308,-536,-308,-536,-476,-496,-476" objectName="Connector-277" Show_id="false" endpinid="pic12f683-10-GP5" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Demux-177-in0" enodeid="Circ_eNode-573"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-277" itemtype="Connector" enodeid="Circ_eNode-604" id="Connector-277" endpinid="pic12f683-10-GP5" valLabely="0" x="-376" valLabRot="0" labely="-24" circRot="0" y="-320" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-376,-320,-376,-308,-536,-308,-536,-476,-496,-476" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Demux-177-in0"/>
 
 Unique  Id: Connector-138: 
 Circuit Id: Connector-138
-<item valLabRot="0" id="Connector-138" hflip="1" labely="-24" x="-304" mainComp="false" vflip="1" labelrot="0" y="-468" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-304,-468,-280,-468" objectName="Connector-138" Show_id="false" endpinid="Seven Segment-129-pin_d" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="ResistorDip-98-resistor3-ePin7" enodeid="Circ_eNode-574"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-138" itemtype="Connector" enodeid="Circ_eNode-605" id="Connector-138" endpinid="Seven Segment-129-pin_d" valLabely="0" x="-304" valLabRot="0" labely="-24" circRot="0" y="-468" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-304,-468,-280,-468" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="ResistorDip-98-resistor3-ePin7"/>
 
 Unique  Id: Connector-222: 
 Circuit Id: Connector-222
-<item valLabRot="0" id="Connector-222" hflip="1" labely="-24" x="-428" mainComp="false" vflip="1" labelrot="0" y="-344" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-428,-344,-400,-344" objectName="Connector-222" Show_id="false" endpinid="Demux-177-in3" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Fixed Voltage-221-outnod" enodeid="Circ_eNode-575"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-222" itemtype="Connector" enodeid="Circ_eNode-606" id="Connector-222" endpinid="Demux-177-in3" valLabely="0" x="-428" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-344" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-428,-344,-400,-344" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Fixed Voltage-221-outnod"/>
 
 Unique  Id: Connector-545: 
 Circuit Id: Connector-545
-<item valLabRot="0" id="Connector-545" hflip="1" labely="-24" x="-448" mainComp="false" vflip="1" labelrot="0" y="-476" valLabelx="0" circPos="0,0" circRot="4.82619726e-316" labelx="-16" pointList="-448,-476,-396,-476" objectName="Connector-545" Show_id="false" endpinid="BcdTo7S-23-in0" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="pic12f683-10-GP0" enodeid="Circ_eNode-576"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-545" itemtype="Connector" enodeid="Circ_eNode-607" id="Connector-545" endpinid="BcdTo7S-23-in0" valLabely="0" x="-448" valLabRot="0" labely="-24" circRot="4.82619726e-316" y="-476" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-448,-476,-396,-476" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="pic12f683-10-GP0"/>
 
 Unique  Id: Connector-546: 
 Circuit Id: Connector-546
-<item valLabRot="0" id="Connector-546" hflip="1" labely="-24" x="-448" mainComp="false" vflip="1" labelrot="0" y="-468" valLabelx="0" circPos="0,0" circRot="4.82619726e-316" labelx="-16" pointList="-448,-468,-396,-468" objectName="Connector-546" Show_id="false" endpinid="BcdTo7S-23-in1" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="pic12f683-10-GP1" enodeid="Circ_eNode-577"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-546" itemtype="Connector" enodeid="Circ_eNode-608" id="Connector-546" endpinid="BcdTo7S-23-in1" valLabely="0" x="-448" valLabRot="0" labely="-24" circRot="4.82619726e-316" y="-468" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-448,-468,-396,-468" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="pic12f683-10-GP1"/>
 
 Unique  Id: Connector-547: 
 Circuit Id: Connector-547
-<item valLabRot="0" id="Connector-547" hflip="1" labely="-24" x="-448" mainComp="false" vflip="1" labelrot="0" y="-460" valLabelx="0" circPos="0,0" circRot="4.82619726e-316" labelx="-16" pointList="-448,-460,-396,-460" objectName="Connector-547" Show_id="false" endpinid="BcdTo7S-23-in2" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="pic12f683-10-GP2" enodeid="Circ_eNode-578"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-547" itemtype="Connector" enodeid="Circ_eNode-609" id="Connector-547" endpinid="BcdTo7S-23-in2" valLabely="0" x="-448" valLabRot="0" labely="-24" circRot="4.82619726e-316" y="-460" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-448,-460,-396,-460" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="pic12f683-10-GP2"/>
 
 Unique  Id: Connector-548: 
 Circuit Id: Connector-548
-<item valLabRot="0" id="Connector-548" hflip="1" labely="-24" x="-396" mainComp="false" vflip="1" labelrot="0" y="-452" valLabelx="0" circPos="0,0" circRot="4.82619726e-316" labelx="-16" pointList="-396,-452,-436,-452,-436,-440,-504,-440,-504,-468,-496,-468" objectName="Connector-548" Show_id="false" endpinid="pic12f683-10-GP4" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BcdTo7S-23-in3" enodeid="Circ_eNode-579"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-548" itemtype="Connector" enodeid="Circ_eNode-610" id="Connector-548" endpinid="pic12f683-10-GP4" valLabely="0" x="-396" valLabRot="0" labely="-24" circRot="4.82619726e-316" y="-452" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-396,-452,-436,-452,-436,-440,-504,-440,-504,-468,-496,-468" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BcdTo7S-23-in3"/>
 
 Unique  Id: Connector-551: 
 Circuit Id: Connector-551
-<item valLabRot="0" id="Connector-551" hflip="1" labely="-24" x="-496" mainComp="false" vflip="1" labelrot="0" y="-460" valLabelx="0" circPos="0,0" circRot="1.381368598087519e-273" labelx="-16" pointList="-496,-460,-496,-420,-420,-420,-420,-392" objectName="Connector-551" Show_id="false" endpinid="Push-173-switch0pinN" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="pic12f683-10-GP3" enodeid="Circ_eNode-580"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-551" itemtype="Connector" enodeid="Circ_eNode-611" id="Connector-551" endpinid="Push-173-switch0pinN" valLabely="0" x="-496" valLabRot="0" labely="-24" circRot="1.381368598087519e-273" y="-460" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-496,-460,-496,-420,-420,-420,-420,-392" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="pic12f683-10-GP3"/>
 
 Unique  Id: Connector-180: 
 Circuit Id: Connector-180
-<item valLabRot="0" id="Connector-180" hflip="1" labely="-24" x="-272" mainComp="false" vflip="1" labelrot="0" y="-352" valLabelx="0" circPos="0,0" circRot="0" labelx="-16" pointList="-272,-352,-352,-352" objectName="Connector-180" Show_id="false" endpinid="Demux-177-out0" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="BJT-157-base" enodeid="Circ_eNode-581"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-180" itemtype="Connector" enodeid="Circ_eNode-612" id="Connector-180" endpinid="Demux-177-out0" valLabely="0" x="-272" valLabRot="0" labely="-24" circRot="0" y="-352" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-272,-352,-352,-352" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="BJT-157-base"/>
 
 Unique  Id: Connector-585: 
 Circuit Id: Connector-585
-<item valLabRot="0" id="Connector-585" hflip="1" labely="-24" x="-476" mainComp="false" vflip="1" labelrot="0" y="-392" valLabelx="0" circPos="0,0" circRot="1.4960638832496927e-271" labelx="-16" pointList="-476,-392,-452,-392" objectName="Connector-585" Show_id="false" endpinid="Push-173-pinP0" rotation="0" itemtype="Connector" boardRot="-1e+06" valLabely="0" boardPos="-1e+06,-1e+06" startpinid="Fixed Voltage-584-outnod" enodeid="enode-585"/>
+<item valLabelx="0" Show_id="false" rotation="0" objectName="Connector-585" itemtype="Connector" enodeid="Circ_eNode-613" id="Connector-585" endpinid="Push-173-pinP0" valLabely="0" x="-476" valLabRot="0" labely="-24" circRot="1.4960638832496927e-271" y="-392" boardRot="-1e+06" labelx="-16" labelrot="0" circPos="0,0" pointList="-476,-392,-452,-392" vflip="1" hflip="1" boardPos="-1e+06,-1e+06" mainComp="false" startpinid="Fixed Voltage-584-outnod"/>
  
 </circuit>
