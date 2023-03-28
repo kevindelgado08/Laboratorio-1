@@ -1,7 +1,7 @@
-#include <pic14/pic12f675.h>
+#include <pic14/pic12f683.h>
  
 //To compile:
-//sdcc -mpic14 -p16f675 bingo.c
+//sdcc -mpic14 -p16f683 bingo.c
  
 //To program the chip using picp:
 //Assuming /dev/ttyUSB0 is the serial port.
@@ -20,27 +20,51 @@
  
 //To program the chip using pk2cmd:
 //pk2cmd -M -PPIC16f887 -Fbingo.hex
- 
+
+
+const char num_entero[] = {
+    0b00000000, // 0
+    0b00000001, // 1
+    0b00000010, // 2
+    0b00000011, // 3
+    0b00000100, // 4
+    0b00000101, // 5
+    0b00000110, // 6
+    0b00000111, // 7
+    0b00010000, // 8
+    0b00010001, // 9
+};
+
+const char num_decimal[] = {
+    0b00100000, // 0
+    0b00100001, // 1
+    0b00100010, // 2
+    0b00100011, // 3
+    0b00100100, // 4
+    0b00100101, // 5
+    0b00100110, // 6
+    0b00100111, // 7
+    0b00110000, // 8
+    0b00110001, // 9
+};
+
+
 void delay (unsigned inttiempo);
  
 void main(void)
 {
-
     TRISIO = 0b00000000; //Poner todos los pines como salidas
-	GPIO = 0x00; //Poner pines en bajo
- 
-    unsigned int time = 100;
- 
-    //Loop forever
-    while ( 1 )
-    {
-			GP0 = 0x00;
-			delay(time);
-
-			GP0 = ~GP0;
-			delay(time);
-    }
- 
+	
+	unsigned int time= 50;
+	
+	while (1)
+	{
+		GPIO = num_entero[9];
+		GPIO = num_decimal[2];
+			
+	}
+	
+	
 }
 
 void delay(unsigned int tiempo)
