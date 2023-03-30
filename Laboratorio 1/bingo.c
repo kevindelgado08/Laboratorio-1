@@ -1,26 +1,7 @@
 #include <pic14/pic12f683.h>
 
-//To compile:
-//sdcc -mpic14 -p16f683 bingo.c
- 
-//To program the chip using picp:
-//Assuming /dev/ttyUSB0 is the serial port.
- 
-//Erase the chip:
-//picp /dev/ttyUSB0 16f887 -ef
- 
-//Write the program:
-//picp /dev/ttyUSB0 16f887 -wp bingo.hex
- 
-//Write the configuration words (optional):
-//picp /dev/ttyUSB0 16f887 -wc 0x2ff4 0x3fff
- 
-//Doing it all at once: erasing, programming, and reading back config words:
-//picp /dev/ttyUSB0 16f887 -ef -wp bingo.hex -rc
- 
-//To program the chip using pk2cmd:
-//pk2cmd -M -PPIC16f887 -Fbingo.hex
-
+typedef unsigned int word ;
+word __at 0x2007 __CONFIG = (_WDT_OFF & _MCLRE_OFF);
 
 const char num_decena[] = {
     0b00000000, // 0
@@ -58,31 +39,34 @@ int decena(int numero){
 	return decenas;
 }
 
-void delay (unsigned inttiempo);
  
 void main(void)
 {
     TRISIO = 0b00000000; //Poner todos los pines como salidas
-	
-	unsigned int time= 50;
 
+    int numeros[16];
+    int p = 190;
+    int q = 151;
+    int m = p * q;
+    int x0 = 317;
 
-	int x = decena(55);
-	int y = unidad(55);
+    for (int i = 0; i < 16; i++) {
+        x0 = (x0 * x0) % m;
+        int numero_pseudoaleatorio = (x0 % 100);
+        numeros[i] = numero_pseudoaleatorio;
+    }
+
+    int dec = decena(numeros[0]);
+    int unid = unidad(numeros[0]);
 	while (1)
 	{
-		GPIO = num_decena[x];
-		GPIO = num_unidad[y];
+		
+        GPIO = num_decena[dec];
+		GPIO = num_unidad[unid];
+        
 	}
 	
 	
 }
 
-void delay(unsigned int tiempo)
-{
-	unsigned int i;
-	unsigned int j;
 
-	for(i=0;i<tiempo;i++)
-	  for(j=0;j<1275;j++);
-}
