@@ -162,12 +162,10 @@ code_bingo	code
 ;   __modsint
 ;   __modsint
 ;   _retener_display
-;   _delay
 ;   __mulint
 ;   __modsint
 ;   __modsint
 ;   _retener_display
-;   _delay
 ;9 compiler assigned registers:
 ;   r0x1012
 ;   r0x1013
@@ -182,16 +180,16 @@ code_bingo	code
 S_bingo__main	code
 _main:
 ; 2 exit points
-;	.line	68; "bingo.c"	TRISIO = 0b00001000; //Poner todos los pines como salidas
+;	.line	70; "bingo.c"	TRISIO = 0b00001000; //Poner todos los pines como salidas
 	MOVLW	0x08
 	BANKSEL	_TRISIO
 	MOVWF	_TRISIO
-;	.line	75; "bingo.c"	int x0 = 2;
+;	.line	77; "bingo.c"	int x0 = 2;
 	MOVLW	0x02
 	BANKSEL	r0x1012
 	MOVWF	r0x1012
 	CLRF	r0x1013
-;	.line	77; "bingo.c"	for (int i = 0; i < 16; i++) {
+;	.line	79; "bingo.c"	for (int i = 0; i < 16; i++) {
 	CLRF	r0x1014
 	CLRF	r0x1015
 ;;signed compare: left < lit(0x10=16), size=2, mask=ffff
@@ -208,7 +206,7 @@ _00152_DS_:
 	BTFSC	STATUS,0
 	GOTO	_00129_DS_
 ;;genSkipc:3307: created from rifx:00000000047A5780
-;	.line	78; "bingo.c"	x0 = (x0 * x0) % m;
+;	.line	80; "bingo.c"	x0 = (x0 * x0) % m;
 	BANKSEL	r0x1012
 	MOVF	r0x1012,W
 	MOVWF	STK02
@@ -238,7 +236,7 @@ _00152_DS_:
 	MOVWF	r0x1013
 	MOVF	STK00,W
 	MOVWF	r0x1012
-;	.line	79; "bingo.c"	int numero_pseudoaleatorio = (x0 % 100);
+;	.line	81; "bingo.c"	int numero_pseudoaleatorio = (x0 % 100);
 	MOVLW	0x64
 	MOVWF	STK02
 	MOVLW	0x00
@@ -254,7 +252,7 @@ _00152_DS_:
 	MOVF	STK00,W
 	MOVWF	_numero
 ;;signed compare: left < lit(0x64=100), size=2, mask=ffff
-;	.line	83; "bingo.c"	if(numero<100) //si el numero pseudoaleatorio es menor que 100
+;	.line	85; "bingo.c"	if(numero<100) //si el numero pseudoaleatorio es menor que 100
 	MOVF	(_numero + 1),W
 	ADDLW	0x80
 	ADDLW	0x80
@@ -267,24 +265,17 @@ _00153_DS_:
 	GOTO	_00128_DS_
 ;;genSkipc:3307: created from rifx:00000000047A5780
 _00117_DS_:
-;	.line	85; "bingo.c"	while (GP3 == 0){
+;	.line	87; "bingo.c"	while (GP3 == 0){
 	BANKSEL	_GPIObits
 	BTFSC	_GPIObits,3
 	GOTO	_00120_DS_
-;	.line	86; "bingo.c"	retener_display(); 
+;	.line	88; "bingo.c"	retener_display(); 
 	PAGESEL	_retener_display
 	CALL	_retener_display
 	PAGESEL	$
-;	.line	87; "bingo.c"	delay(1);
-	MOVLW	0x01
-	MOVWF	STK00
-	MOVLW	0x00
-	PAGESEL	_delay
-	CALL	_delay
-	PAGESEL	$
 	GOTO	_00117_DS_
 _00120_DS_:
-;	.line	90; "bingo.c"	while (GP3 == 1){
+;	.line	91; "bingo.c"	while (GP3 == 1){
 	BANKSEL	r0x1017
 	CLRF	r0x1017
 	BANKSEL	_GPIObits
@@ -295,7 +286,7 @@ _00120_DS_:
 _00001_DS_:
 	BANKSEL	r0x1017
 	MOVF	r0x1017,W
-;	.line	77; "bingo.c"	for (int i = 0; i < 16; i++) {
+;	.line	79; "bingo.c"	for (int i = 0; i < 16; i++) {
 	XORLW	0x01
 	BTFSC	STATUS,2
 	GOTO	_00120_DS_
@@ -306,7 +297,7 @@ _00128_DS_:
 	INCF	r0x1015,F
 	GOTO	_00127_DS_
 _00129_DS_:
-;	.line	97; "bingo.c"	}
+;	.line	98; "bingo.c"	}
 	RETURN	
 ; exit point of _main
 
@@ -328,12 +319,12 @@ _00129_DS_:
 S_bingo__delay	code
 _delay:
 ; 2 exit points
-;	.line	99; "bingo.c"	void delay(unsigned int tiempo) //Se crea un tiempo de espera
+;	.line	100; "bingo.c"	void delay(unsigned int tiempo) //Se crea un tiempo de espera
 	BANKSEL	r0x1004
 	MOVWF	r0x1004
 	MOVF	STK00,W
 	MOVWF	r0x1005
-;	.line	104; "bingo.c"	for( i=0; i <tiempo; i ++)
+;	.line	105; "bingo.c"	for( i=0; i <tiempo; i ++)
 	CLRF	r0x1006
 	CLRF	r0x1007
 _00165_DS_:
@@ -348,7 +339,7 @@ _00186_DS_:
 	BTFSC	STATUS,0
 	GOTO	_00167_DS_
 ;;genSkipc:3307: created from rifx:00000000047A5780
-;	.line	105; "bingo.c"	for( j =0; j <1000; j ++);
+;	.line	106; "bingo.c"	for( j =0; j <1000; j ++);
 	MOVLW	0xe8
 	BANKSEL	r0x1008
 	MOVWF	r0x1008
@@ -373,13 +364,13 @@ _00163_DS_:
 	IORWF	r0x100A,W
 	BTFSS	STATUS,2
 	GOTO	_00163_DS_
-;	.line	104; "bingo.c"	for( i=0; i <tiempo; i ++)
+;	.line	105; "bingo.c"	for( i=0; i <tiempo; i ++)
 	INCF	r0x1006,F
 	BTFSC	STATUS,2
 	INCF	r0x1007,F
 	GOTO	_00165_DS_
 _00167_DS_:
-;	.line	106; "bingo.c"	}
+;	.line	107; "bingo.c"	}
 	RETURN	
 ; exit point of _delay
 
@@ -397,13 +388,13 @@ _00167_DS_:
 S_bingo__retener_display	code
 _retener_display:
 ; 2 exit points
-;	.line	60; "bingo.c"	retener=2; 
+;	.line	62; "bingo.c"	retener=2; 
 	MOVLW	0x02
 	BANKSEL	_retener
 	MOVWF	_retener
 	CLRF	(_retener + 1)
 _00109_DS_:
-;	.line	61; "bingo.c"	while (retener>0, retener--) 
+;	.line	63; "bingo.c"	while (retener>0, retener--) 
 	BANKSEL	_retener
 	MOVF	_retener,W
 	BANKSEL	r0x1010
@@ -422,13 +413,13 @@ _00109_DS_:
 	IORWF	r0x1010,W
 	BTFSC	STATUS,2
 	GOTO	_00112_DS_
-;	.line	63; "bingo.c"	num_display();        
+;	.line	65; "bingo.c"	num_display();        
 	PAGESEL	_num_display
 	CALL	_num_display
 	PAGESEL	$
 	GOTO	_00109_DS_
 _00112_DS_:
-;	.line	65; "bingo.c"	}
+;	.line	67; "bingo.c"	}
 	RETURN	
 ; exit point of _retener_display
 
@@ -461,7 +452,7 @@ _00112_DS_:
 S_bingo__num_display	code
 _num_display:
 ; 2 exit points
-;	.line	48; "bingo.c"	dec=numero/10;
+;	.line	50; "bingo.c"	dec=numero/10;
 	MOVLW	0x0a
 	MOVWF	STK02
 	MOVLW	0x00
@@ -477,7 +468,7 @@ _num_display:
 	MOVWF	r0x100C
 	MOVF	STK00,W
 	MOVWF	r0x100D
-;	.line	49; "bingo.c"	unid=numero%10;
+;	.line	51; "bingo.c"	unid=numero%10;
 	MOVLW	0x0a
 	MOVWF	STK02
 	MOVLW	0x00
@@ -492,7 +483,7 @@ _num_display:
 	BANKSEL	r0x100E
 	MOVWF	r0x100E
 	MOVF	STK00,W
-;	.line	51; "bingo.c"	GPIO=(num_unidad[unid]); 
+;	.line	53; "bingo.c"	GPIO=(num_unidad[unid]); 
 	MOVWF	r0x100F
 	ADDLW	(_num_unidad + 0)
 	MOVWF	r0x100F
@@ -511,14 +502,14 @@ _num_display:
 	PAGESEL	$
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
-;	.line	52; "bingo.c"	delay(1);
+;	.line	54; "bingo.c"	delay(1);
 	MOVLW	0x01
 	MOVWF	STK00
 	MOVLW	0x00
 	PAGESEL	_delay
 	CALL	_delay
 	PAGESEL	$
-;	.line	53; "bingo.c"	GPIO=(num_decena[dec]);
+;	.line	55; "bingo.c"	GPIO=(num_decena[dec]);
 	BANKSEL	r0x100D
 	MOVF	r0x100D,W
 	ADDLW	(_num_decena + 0)
@@ -538,19 +529,19 @@ _num_display:
 	PAGESEL	$
 	BANKSEL	_GPIO
 	MOVWF	_GPIO
-;	.line	54; "bingo.c"	delay(1);                     
+;	.line	56; "bingo.c"	delay(1);                     
 	MOVLW	0x01
 	MOVWF	STK00
 	MOVLW	0x00
 	PAGESEL	_delay
 	CALL	_delay
 	PAGESEL	$
-;	.line	56; "bingo.c"	}
+;	.line	58; "bingo.c"	}
 	RETURN	
 ; exit point of _num_display
 
 
 ;	code size estimation:
-;	  196+   55 =   251 instructions (  612 byte)
+;	  192+   53 =   245 instructions (  596 byte)
 
 	end

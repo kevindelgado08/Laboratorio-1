@@ -86,7 +86,6 @@ void main(void)
         {
             while (GP3 == 0){
                 retener_display(); 
-                delay(1);
             }
             
             while (GP3 == 1){
