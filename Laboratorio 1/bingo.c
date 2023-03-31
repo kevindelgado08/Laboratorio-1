@@ -9,6 +9,7 @@ Estudiante: Kevin Delgado Rojas - B82566*/
 typedef unsigned int word ;
 word __at 0x2007 __CONFIG = (_WDT_OFF & _MCLRE_OFF);
 
+//Contiene la configuración de los estados de los pines para las decenas (GP5 = 0)
 unsigned const char num_decena[] = {
     0b00000000, // 0
     0b00000001, // 1
@@ -22,6 +23,7 @@ unsigned const char num_decena[] = {
     0b00010001, // 9
 };
 
+//Contiene la configuración de los estados de los pines para las unidades (GP5 = 1)
 unsigned const char num_unidad[] = {
     0b00100000, // 0
     0b00100001, // 1
@@ -37,10 +39,11 @@ unsigned const char num_unidad[] = {
 
 void delay(unsigned int tiempo);
 
-int numero;    
+//Variables necesarias
+int numero;  
 int retener;  
               
-
+//Función para moestrar en el display
 void num_display( )
 {
     int unid;
@@ -50,6 +53,7 @@ void num_display( )
     dec=numero/10;
     unid=numero%10;
     
+    //Se configura el GPIO para mostrar numero en display
     GPIO=(num_unidad[unid]); 
     delay(1);
     GPIO=(num_decena[dec]);
@@ -57,14 +61,7 @@ void num_display( )
    
 }
 
-void retener_display() 
-{
-   retener=2; 
-   while (retener>0, retener--) 
-    {
-      num_display();        
-    }
-}
+//Programa Principal
 void main(void)
 {
     TRISIO = 0b00001000; //Poner todos los pines como salidas
@@ -77,15 +74,15 @@ void main(void)
     int x0 = 2;
 
     for (int i = 0; i < 16; i++) {
-        x0 = (x0 * x0) % m;
+        x0 = (x0 * x0) % m; // Formula BBS -> Xi^2 mod m
         int numero_pseudoaleatorio = (x0 % 100);
         numero = numero_pseudoaleatorio;
         //
 
-        if(numero<100) //si el numero pseudoaleatorio es menor que 100
+        if(numero<100) //si el numero pseudoaleatorio es menor que 100 (Por seguridad)
         {
             while (GP3 == 0){
-                retener_display(); 
+                num_display(); 
             }
             
             while (GP3 == 1){
