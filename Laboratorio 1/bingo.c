@@ -1,9 +1,15 @@
+/*Universidad de Costa Rica
+IE-0624 Laboratorio de Microcontroladores
+Estudiante: Kevin Delgado Rojas - B82566*/
+
 #include <pic14/pic12f683.h>
+
+/*Para compilar use: sdcc --use-non-free -mpic14 -p12f683 -I. -I/usr/local/share/sdcc/non-free/include -o bingo bingo.c*/
 
 typedef unsigned int word ;
 word __at 0x2007 __CONFIG = (_WDT_OFF & _MCLRE_OFF);
 
-const char num_decena[] = {
+unsigned const char num_decena[] = {
     0b00000000, // 0
     0b00000001, // 1
     0b00000010, // 2
@@ -16,7 +22,7 @@ const char num_decena[] = {
     0b00010001, // 9
 };
 
-const char num_unidad[] = {
+unsigned const char num_unidad[] = {
     0b00100000, // 0
     0b00100001, // 1
     0b00100010, // 2
@@ -29,44 +35,74 @@ const char num_unidad[] = {
     0b00110001, // 9
 };
 
-int unidad(int numero){
-	int unidades = numero%10;
-	return unidades;
+void delay(unsigned int tiempo);
+
+int numero;    
+int retener;  
+              
+
+void num_display( )
+{
+    int unid;
+    int dec;
+
+    //Para multiplexar el numero en decena y unidad
+    dec=numero/10;
+    unid=numero%10;
+    
+    GPIO=(num_unidad[unid]); 
+    delay(1);
+    GPIO=(num_decena[dec]);
+    delay(1);                     
+   
 }
 
-int decena(int numero){
-	int decenas= numero/10;
-	return decenas;
+void retener_display() 
+{
+   retener=2; 
+   while (retener>0, retener--) 
+    {
+      num_display();        
+    }
 }
-
- 
 void main(void)
 {
-    TRISIO = 0b00000000; //Poner todos los pines como salidas
-
-    int numeros[16];
-    int p = 190;
-    int q = 151;
+    TRISIO = 0b00001000; //Poner todos los pines como salidas
+    
+    //Variables para generar numeros pseudoaleatorios
+    //Algoritmo BBS
+    int p = 9;
+    int q = 27;
     int m = p * q;
-    int x0 = 317;
+    int x0 = 2;
 
     for (int i = 0; i < 16; i++) {
         x0 = (x0 * x0) % m;
         int numero_pseudoaleatorio = (x0 % 100);
-        numeros[i] = numero_pseudoaleatorio;
-    }
+        numero = numero_pseudoaleatorio;
+        //
 
-    int dec = decena(numeros[0]);
-    int unid = unidad(numeros[0]);
-	while (1)
-	{
-		
-        GPIO = num_decena[dec];
-		GPIO = num_unidad[unid];
-        
-	}
-	
-	
+        if(numero<100) //si el numero pseudoaleatorio es menor que 100
+        {
+            while (GP3 == 0){
+                retener_display(); 
+                delay(1);
+            }
+            
+            while (GP3 == 1){
+                //Botón presionado para cambiar de número
+            }
+            
+        }
+    
+   }
 }
 
+void delay(unsigned int tiempo) //Se crea un tiempo de espera
+{
+    unsigned int i ;
+    unsigned int j ;
 
+    for( i=0; i <tiempo; i ++)
+        for( j =0; j <1000; j ++);
+}

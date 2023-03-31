@@ -1,6 +1,6 @@
 gplink-1.5.0 #1285 (Sep 12 2016)
 Copyright (c) 1998-2016 gputils project
-Listing File Generated: 3-30-2023  16:54:41
+Listing File Generated: 3-30-2023  23:48:10
 
 
 Address  Value    Disassembly              Source
@@ -33,20 +33,24 @@ Address  Value    Disassembly              Source
                                            ; external declarations
                                            ;--------------------------------------------------------
                                            	extern	__mulint
-                                           	extern	__divsint
                                            	extern	__modsint
+                                           	extern	__divsint
                                            	extern	_TRISIO
                                            	extern	_GPIO
+                                           	extern	_GPIObits
                                            	extern	__gptrget1
                                            	extern	__sdcc_gsinit_startup
                                            ;--------------------------------------------------------
                                            ; global declarations
                                            ;--------------------------------------------------------
                                            	global	_main
-                                           	global	_decena
-                                           	global	_unidad
+                                           	global	_retener_display
+                                           	global	_num_display
                                            	global	_num_unidad
                                            	global	_num_decena
+                                           	global	_retener
+                                           	global	_numero
+                                           	global	_delay
 
                                            	global PSAVE
                                            	global SSAVE
@@ -86,6 +90,12 @@ Address  Value    Disassembly              Source
                                            ;--------------------------------------------------------
                                            ; global definitions
                                            ;--------------------------------------------------------
+                                           UD_bingo_0	udata
+                                           _numero	res	2
+
+                                           UD_bingo_1	udata
+                                           _retener	res	2
+
                                            ;--------------------------------------------------------
                                            ; absolute symbol definitions
                                            ;--------------------------------------------------------
@@ -93,48 +103,55 @@ Address  Value    Disassembly              Source
                                            ; compiler-defined variables
                                            ;--------------------------------------------------------
                                            UDL_bingo_0	udata
-                                           r0x1021	res	1
-                                           r0x1020	res	1
-                                           r0x1022	res	1
-                                           r0x1023	res	1
-                                           r0x1024	res	1
-                                           r0x1025	res	1
-                                           r0x1026	res	1
-                                           r0x1027	res	1
-                                           r0x1029	res	1
-                                           r0x1028	res	1
-                                           r0x102A	res	1
-                                           r0x102B	res	1
-                                           _main_numeros_65537_7	res	32
+                                           r0x100D	res	1
+                                           r0x100C	res	1
+                                           r0x100F	res	1
+                                           r0x100E	res	1
+                                           r0x1010	res	1
+                                           r0x1011	res	1
+                                           r0x1012	res	1
+                                           r0x1013	res	1
+                                           r0x1014	res	1
+                                           r0x1015	res	1
+                                           r0x1017	res	1
+                                           r0x1016	res	1
+                                           r0x1005	res	1
+                                           r0x1004	res	1
+                                           r0x1006	res	1
+                                           r0x1007	res	1
+                                           r0x1008	res	1
+                                           r0x1009	res	1
+                                           r0x100A	res	1
+                                           r0x100B	res	1
                                            ;--------------------------------------------------------
                                            ; initialized data
                                            ;--------------------------------------------------------
 
                                            IDC_bingo_0	code
                                            _num_decena
-000396   3400     retlw   0x00             	retlw 0x00	; 0
-000397   3401     retlw   0x01             	retlw 0x01	; 1
-000398   3402     retlw   0x02             	retlw 0x02	; 2
-000399   3403     retlw   0x03             	retlw 0x03	; 3
-00039a   3404     retlw   0x04             	retlw 0x04	; 4
-00039b   3405     retlw   0x05             	retlw 0x05	; 5
-00039c   3406     retlw   0x06             	retlw 0x06	; 6
-00039d   3407     retlw   0x07             	retlw 0x07	; 7
-00039e   3410     retlw   0x10             	retlw 0x10	; 16
-00039f   3411     retlw   0x11             	retlw 0x11	; 17
+0003b2   3400     retlw   0x00             	retlw 0x00	; 0
+0003b3   3401     retlw   0x01             	retlw 0x01	; 1
+0003b4   3402     retlw   0x02             	retlw 0x02	; 2
+0003b5   3403     retlw   0x03             	retlw 0x03	; 3
+0003b6   3404     retlw   0x04             	retlw 0x04	; 4
+0003b7   3405     retlw   0x05             	retlw 0x05	; 5
+0003b8   3406     retlw   0x06             	retlw 0x06	; 6
+0003b9   3407     retlw   0x07             	retlw 0x07	; 7
+0003ba   3410     retlw   0x10             	retlw 0x10	; 16
+0003bb   3411     retlw   0x11             	retlw 0x11	; 17
 
                                            IDC_bingo_1	code
                                            _num_unidad
-0003a0   3420     retlw   0x20             	retlw 0x20	; 32
-0003a1   3421     retlw   0x21             	retlw 0x21	; 33
-0003a2   3422     retlw   0x22             	retlw 0x22	; 34
-0003a3   3423     retlw   0x23             	retlw 0x23	; 35
-0003a4   3424     retlw   0x24             	retlw 0x24	; 36
-0003a5   3425     retlw   0x25             	retlw 0x25	; 37
-0003a6   3426     retlw   0x26             	retlw 0x26	; 38
-0003a7   3427     retlw   0x27             	retlw 0x27	; 39
-0003a8   3430     retlw   0x30             	retlw 0x30	; 48	'0'
-0003a9   3431     retlw   0x31             	retlw 0x31	; 49	'1'
+0003bc   3420     retlw   0x20             	retlw 0x20	; 32
+0003bd   3421     retlw   0x21             	retlw 0x21	; 33
+0003be   3422     retlw   0x22             	retlw 0x22	; 34
+0003bf   3423     retlw   0x23             	retlw 0x23	; 35
+0003c0   3424     retlw   0x24             	retlw 0x24	; 36
+0003c1   3425     retlw   0x25             	retlw 0x25	; 37
+0003c2   3426     retlw   0x26             	retlw 0x26	; 38
+0003c3   3427     retlw   0x27             	retlw 0x27	; 39
+0003c4   3430     retlw   0x30             	retlw 0x30	; 48	'0'
+0003c5   3431     retlw   0x31             	retlw 0x31	; 49	'1'
                                            ;--------------------------------------------------------
                                            ; initialized absolute data
                                            ;--------------------------------------------------------
@@ -148,7 +165,7 @@ Address  Value    Disassembly              Source
                                            STARTUP	code 0x0000
 000000   0000     nop                      	nop
                                            	pagesel __sdcc_gsinit_startup
-000001   28a3     goto    0x00a3           	goto	__sdcc_gsinit_startup
+000001   2802     goto    0x0002           	goto	__sdcc_gsinit_startup
                                            ;--------------------------------------------------------
                                            ; code
                                            ;--------------------------------------------------------
@@ -161,320 +178,396 @@ Address  Value    Disassembly              Source
                                            ;   __mulint
                                            ;   __modsint
                                            ;   __modsint
-                                           ;   _decena
-                                           ;   _unidad
-                                           ;   __gptrget1
-                                           ;   __gptrget1
+                                           ;   _retener_display
+                                           ;   _delay
                                            ;   __mulint
                                            ;   __modsint
                                            ;   __modsint
-                                           ;   _decena
-                                           ;   _unidad
-                                           ;   __gptrget1
-                                           ;   __gptrget1
-                                           ;13 compiler assigned registers:
-                                           ;   r0x1022
-                                           ;   r0x1023
-                                           ;   r0x1024
-                                           ;   r0x1025
-                                           ;   r0x1026
-                                           ;   r0x1027
+                                           ;   _retener_display
+                                           ;   _delay
+                                           ;9 compiler assigned registers:
+                                           ;   r0x1012
+                                           ;   r0x1013
+                                           ;   r0x1014
+                                           ;   r0x1015
                                            ;   STK02
                                            ;   STK01
                                            ;   STK00
-                                           ;   r0x1028
-                                           ;   r0x1029
-                                           ;   r0x102A
-                                           ;   r0x102B
+                                           ;   r0x1016
+                                           ;   r0x1017
                                            ;; Starting pCode block
                                            S_bingo__main	code
                                            _main:
                                            ; 2 exit points
-                                           ;	.line	45; "bingo.c"	TRISIO = 0b00000000; //Poner todos los pines como salidas
-000002   1683     bsf     0x03, 0x5        	BANKSEL	_TRISIO
-000003   0185     clrf    0x05             	CLRF	_TRISIO
-                                           ;	.line	51; "bingo.c"	int x0 = 317;
-000004   303d     movlw   0x3d             	MOVLW	0x3d
-000005   1283     bcf     0x03, 0x5        	BANKSEL	r0x1022
-000006   00a2     movwf   0x22             	MOVWF	r0x1022
-000007   3001     movlw   0x01             	MOVLW	0x01
-000008   00a3     movwf   0x23             	MOVWF	r0x1023
-                                           ;	.line	53; "bingo.c"	for (int i = 0; i < 16; i++) {
-000009   01a4     clrf    0x24             	CLRF	r0x1024
-00000a   01a5     clrf    0x25             	CLRF	r0x1025
-00000b   01a6     clrf    0x26             	CLRF	r0x1026
-00000c   01a7     clrf    0x27             	CLRF	r0x1027
+                                           ;	.line	68; "bingo.c"	TRISIO = 0b00001000; //Poner todos los pines como salidas
+0001e9   3008     movlw   0x08             	MOVLW	0x08
+0001ea   1683     bsf     0x03, 0x5        	BANKSEL	_TRISIO
+0001eb   0085     movwf   0x05             	MOVWF	_TRISIO
+                                           ;	.line	75; "bingo.c"	int x0 = 2;
+0001ec   3002     movlw   0x02             	MOVLW	0x02
+0001ed   1683     bsf     0x03, 0x5        	BANKSEL	r0x1012
+0001ee   00a6     movwf   0x26             	MOVWF	r0x1012
+0001ef   01a7     clrf    0x27             	CLRF	r0x1013
+                                           ;	.line	77; "bingo.c"	for (int i = 0; i < 16; i++) {
+0001f0   01a8     clrf    0x28             	CLRF	r0x1014
+0001f1   01a9     clrf    0x29             	CLRF	r0x1015
                                            ;;signed compare: left < lit(0x10=16), size=2, mask=ffff
-                                           _00118_DS_:
-00000d   1283     bcf     0x03, 0x5        	BANKSEL	r0x1025
-00000e   0825     movf    0x25, 0x0        	MOVF	r0x1025,W
-00000f   3e80     addlw   0x80             	ADDLW	0x80
-000010   3e80     addlw   0x80             	ADDLW	0x80
-000011   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
-000012   2815     goto    0x0015           	GOTO	_00135_DS_
-000013   3010     movlw   0x10             	MOVLW	0x10
-000014   0224     subwf   0x24, 0x0        	SUBWF	r0x1024,W
-                                           _00135_DS_:
-000015   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
-000016   285d     goto    0x005d           	GOTO	_00113_DS_
+                                           _00127_DS_:
+0001f2   1683     bsf     0x03, 0x5        	BANKSEL	r0x1015
+0001f3   0829     movf    0x29, 0x0        	MOVF	r0x1015,W
+0001f4   3e80     addlw   0x80             	ADDLW	0x80
+0001f5   3e80     addlw   0x80             	ADDLW	0x80
+0001f6   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+0001f7   29fa     goto    0x01fa           	GOTO	_00152_DS_
+0001f8   3010     movlw   0x10             	MOVLW	0x10
+0001f9   0228     subwf   0x28, 0x0        	SUBWF	r0x1014,W
+                                           _00152_DS_:
+0001fa   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+0001fb   2a44     goto    0x0244           	GOTO	_00129_DS_
                                            ;;genSkipc:3307: created from rifx:00000000047A5780
-                                           ;	.line	54; "bingo.c"	x0 = (x0 * x0) % m;
-000017   1283     bcf     0x03, 0x5        	BANKSEL	r0x1022
-000018   0822     movf    0x22, 0x0        	MOVF	r0x1022,W
-000019   00fd     movwf   0x7d             	MOVWF	STK02
-00001a   0823     movf    0x23, 0x0        	MOVF	r0x1023,W
-00001b   00fe     movwf   0x7e             	MOVWF	STK01
-00001c   0822     movf    0x22, 0x0        	MOVF	r0x1022,W
-00001d   00ff     movwf   0x7f             	MOVWF	STK00
-00001e   0823     movf    0x23, 0x0        	MOVF	r0x1023,W
+                                           ;	.line	78; "bingo.c"	x0 = (x0 * x0) % m;
+0001fc   1683     bsf     0x03, 0x5        	BANKSEL	r0x1012
+0001fd   0826     movf    0x26, 0x0        	MOVF	r0x1012,W
+0001fe   00fd     movwf   0x7d             	MOVWF	STK02
+0001ff   0827     movf    0x27, 0x0        	MOVF	r0x1013,W
+000200   00fe     movwf   0x7e             	MOVWF	STK01
+000201   0826     movf    0x26, 0x0        	MOVF	r0x1012,W
+000202   00ff     movwf   0x7f             	MOVWF	STK00
+000203   0827     movf    0x27, 0x0        	MOVF	r0x1013,W
                                            	PAGESEL	__mulint
-00001f   213f     call    0x013f           	CALL	__mulint
+000204   209e     call    0x009e           	CALL	__mulint
                                            	PAGESEL	$
-000020   1283     bcf     0x03, 0x5        	BANKSEL	r0x1028
-000021   00a9     movwf   0x29             	MOVWF	r0x1028
-000022   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-000023   00a8     movwf   0x28             	MOVWF	r0x1029
-000024   3012     movlw   0x12             	MOVLW	0x12
-000025   00fd     movwf   0x7d             	MOVWF	STK02
-000026   3070     movlw   0x70             	MOVLW	0x70
-000027   00fe     movwf   0x7e             	MOVWF	STK01
-000028   0828     movf    0x28, 0x0        	MOVF	r0x1029,W
-000029   00ff     movwf   0x7f             	MOVWF	STK00
-00002a   0829     movf    0x29, 0x0        	MOVF	r0x1028,W
+000205   1683     bsf     0x03, 0x5        	BANKSEL	r0x1016
+000206   00ab     movwf   0x2b             	MOVWF	r0x1016
+000207   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+000208   00aa     movwf   0x2a             	MOVWF	r0x1017
+000209   30f3     movlw   0xf3             	MOVLW	0xf3
+00020a   00fd     movwf   0x7d             	MOVWF	STK02
+00020b   3000     movlw   0x00             	MOVLW	0x00
+00020c   00fe     movwf   0x7e             	MOVWF	STK01
+00020d   082a     movf    0x2a, 0x0        	MOVF	r0x1017,W
+00020e   00ff     movwf   0x7f             	MOVWF	STK00
+00020f   082b     movf    0x2b, 0x0        	MOVF	r0x1016,W
                                            	PAGESEL	__modsint
-00002b   2229     call    0x0229           	CALL	__modsint
+000210   2188     call    0x0188           	CALL	__modsint
                                            	PAGESEL	$
-00002c   1283     bcf     0x03, 0x5        	BANKSEL	r0x1023
-00002d   00a3     movwf   0x23             	MOVWF	r0x1023
-00002e   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-00002f   00a2     movwf   0x22             	MOVWF	r0x1022
-                                           ;	.line	55; "bingo.c"	int numero_pseudoaleatorio = (x0 % 100);
-000030   3064     movlw   0x64             	MOVLW	0x64
-000031   00fd     movwf   0x7d             	MOVWF	STK02
-000032   3000     movlw   0x00             	MOVLW	0x00
-000033   00fe     movwf   0x7e             	MOVWF	STK01
-000034   0822     movf    0x22, 0x0        	MOVF	r0x1022,W
-000035   00ff     movwf   0x7f             	MOVWF	STK00
-000036   0823     movf    0x23, 0x0        	MOVF	r0x1023,W
+000211   1683     bsf     0x03, 0x5        	BANKSEL	r0x1013
+000212   00a7     movwf   0x27             	MOVWF	r0x1013
+000213   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+000214   00a6     movwf   0x26             	MOVWF	r0x1012
+                                           ;	.line	79; "bingo.c"	int numero_pseudoaleatorio = (x0 % 100);
+000215   3064     movlw   0x64             	MOVLW	0x64
+000216   00fd     movwf   0x7d             	MOVWF	STK02
+000217   3000     movlw   0x00             	MOVLW	0x00
+000218   00fe     movwf   0x7e             	MOVWF	STK01
+000219   0826     movf    0x26, 0x0        	MOVF	r0x1012,W
+00021a   00ff     movwf   0x7f             	MOVWF	STK00
+00021b   0827     movf    0x27, 0x0        	MOVF	r0x1013,W
                                            	PAGESEL	__modsint
-000037   2229     call    0x0229           	CALL	__modsint
+00021c   2188     call    0x0188           	CALL	__modsint
                                            	PAGESEL	$
-000038   1283     bcf     0x03, 0x5        	BANKSEL	r0x1028
-000039   00a9     movwf   0x29             	MOVWF	r0x1028
-00003a   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-00003b   00a8     movwf   0x28             	MOVWF	r0x1029
-                                           ;	.line	56; "bingo.c"	numeros[i] = numero_pseudoaleatorio;
-00003c   0826     movf    0x26, 0x0        	MOVF	r0x1026,W
-00003d   3e2c     addlw   0x2c             	ADDLW	(_main_numeros_65537_7 + 0)
-00003e   00aa     movwf   0x2a             	MOVWF	r0x102A
-00003f   3000     movlw   0x00             	MOVLW	high (_main_numeros_65537_7 + 0)
-000040   00ab     movwf   0x2b             	MOVWF	r0x102B
-000041   0827     movf    0x27, 0x0        	MOVF	r0x1027,W
-000042   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
-000043   0f27     incfsz  0x27, 0x0        	INCFSZ	r0x1027,W
-000044   07ab     addwf   0x2b, 0x1        	ADDWF	r0x102B,F
-000045   082a     movf    0x2a, 0x0        	MOVF	r0x102A,W
-000046   1283     bcf     0x03, 0x5        	BANKSEL	FSR
-000047   0084     movwf   0x04             	MOVWF	FSR
-000048   1383     bcf     0x03, 0x7        	BCF	STATUS,7
-000049   1283     bcf     0x03, 0x5        	BANKSEL	r0x102B
-00004a   182b     btfsc   0x2b, 0x0        	BTFSC	r0x102B,0
-00004b   1783     bsf     0x03, 0x7        	BSF	STATUS,7
-00004c   0828     movf    0x28, 0x0        	MOVF	r0x1029,W
-00004d   1283     bcf     0x03, 0x5        	BANKSEL	INDF
-00004e   0080     movwf   0x00             	MOVWF	INDF
-00004f   0a84     incf    0x04, 0x1        	INCF	FSR,F
-000050   1283     bcf     0x03, 0x5        	BANKSEL	r0x1028
-000051   0829     movf    0x29, 0x0        	MOVF	r0x1028,W
-000052   1283     bcf     0x03, 0x5        	BANKSEL	INDF
-000053   0080     movwf   0x00             	MOVWF	INDF
-                                           ;	.line	53; "bingo.c"	for (int i = 0; i < 16; i++) {
-000054   3002     movlw   0x02             	MOVLW	0x02
-000055   1283     bcf     0x03, 0x5        	BANKSEL	r0x1026
-000056   07a6     addwf   0x26, 0x1        	ADDWF	r0x1026,F
-000057   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
-000058   0aa7     incf    0x27, 0x1        	INCF	r0x1027,F
-000059   0aa4     incf    0x24, 0x1        	INCF	r0x1024,F
-00005a   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
-00005b   0aa5     incf    0x25, 0x1        	INCF	r0x1025,F
-00005c   280d     goto    0x000d           	GOTO	_00118_DS_
-                                           _00113_DS_:
-                                           ;	.line	59; "bingo.c"	int dec = decena(numeros[0]);
-00005d   1283     bcf     0x03, 0x5        	BANKSEL	_main_numeros_65537_7
-00005e   082c     movf    0x2c, 0x0        	MOVF	(_main_numeros_65537_7 + 0),W
-00005f   1283     bcf     0x03, 0x5        	BANKSEL	r0x1022
-000060   00a2     movwf   0x22             	MOVWF	r0x1022
-000061   1283     bcf     0x03, 0x5        	BANKSEL	_main_numeros_65537_7
-000062   082d     movf    0x2d, 0x0        	MOVF	(_main_numeros_65537_7 + 1),W
-000063   1283     bcf     0x03, 0x5        	BANKSEL	r0x1023
-000064   00a3     movwf   0x23             	MOVWF	r0x1023
-000065   0822     movf    0x22, 0x0        	MOVF	r0x1022,W
-000066   00ff     movwf   0x7f             	MOVWF	STK00
-000067   0823     movf    0x23, 0x0        	MOVF	r0x1023,W
-                                           	PAGESEL	_decena
-000068   2370     call    0x0370           	CALL	_decena
+00021d   1283     bcf     0x03, 0x5        	BANKSEL	_numero
+00021e   00d0     movwf   0x50             	MOVWF	(_numero + 1)
+00021f   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+000220   00cf     movwf   0x4f             	MOVWF	_numero
+                                           ;;signed compare: left < lit(0x64=100), size=2, mask=ffff
+                                           ;	.line	83; "bingo.c"	if(numero<100) //si el numero pseudoaleatorio es menor que 100
+000221   0850     movf    0x50, 0x0        	MOVF	(_numero + 1),W
+000222   3e80     addlw   0x80             	ADDLW	0x80
+000223   3e80     addlw   0x80             	ADDLW	0x80
+000224   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+000225   2a28     goto    0x0228           	GOTO	_00153_DS_
+000226   3064     movlw   0x64             	MOVLW	0x64
+000227   024f     subwf   0x4f, 0x0        	SUBWF	_numero,W
+                                           _00153_DS_:
+000228   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+000229   2a3f     goto    0x023f           	GOTO	_00128_DS_
+                                           ;;genSkipc:3307: created from rifx:00000000047A5780
+                                           _00117_DS_:
+                                           ;	.line	85; "bingo.c"	while (GP3 == 0){
+00022a   1283     bcf     0x03, 0x5        	BANKSEL	_GPIObits
+00022b   1985     btfsc   0x05, 0x3        	BTFSC	_GPIObits,3
+00022c   2a33     goto    0x0233           	GOTO	_00120_DS_
+                                           ;	.line	86; "bingo.c"	retener_display(); 
+                                           	PAGESEL	_retener_display
+00022d   2399     call    0x0399           	CALL	_retener_display
                                            	PAGESEL	$
-000069   1283     bcf     0x03, 0x5        	BANKSEL	r0x1023
-00006a   00a3     movwf   0x23             	MOVWF	r0x1023
-00006b   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-00006c   00a2     movwf   0x22             	MOVWF	r0x1022
-                                           ;	.line	60; "bingo.c"	int unid = unidad(numeros[0]);
-00006d   1283     bcf     0x03, 0x5        	BANKSEL	_main_numeros_65537_7
-00006e   082c     movf    0x2c, 0x0        	MOVF	(_main_numeros_65537_7 + 0),W
-00006f   1283     bcf     0x03, 0x5        	BANKSEL	r0x1024
-000070   00a4     movwf   0x24             	MOVWF	r0x1024
-000071   1283     bcf     0x03, 0x5        	BANKSEL	_main_numeros_65537_7
-000072   082d     movf    0x2d, 0x0        	MOVF	(_main_numeros_65537_7 + 1),W
-000073   1283     bcf     0x03, 0x5        	BANKSEL	r0x1025
-000074   00a5     movwf   0x25             	MOVWF	r0x1025
-000075   0824     movf    0x24, 0x0        	MOVF	r0x1024,W
-000076   00ff     movwf   0x7f             	MOVWF	STK00
-000077   0825     movf    0x25, 0x0        	MOVF	r0x1025,W
-                                           	PAGESEL	_unidad
-000078   2383     call    0x0383           	CALL	_unidad
+                                           ;	.line	87; "bingo.c"	delay(1);
+00022e   3001     movlw   0x01             	MOVLW	0x01
+00022f   00ff     movwf   0x7f             	MOVWF	STK00
+000230   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+000231   2343     call    0x0343           	CALL	_delay
                                            	PAGESEL	$
-000079   1283     bcf     0x03, 0x5        	BANKSEL	r0x1025
-00007a   00a5     movwf   0x25             	MOVWF	r0x1025
-00007b   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-00007c   00a4     movwf   0x24             	MOVWF	r0x1024
-                                           _00115_DS_:
-                                           ;	.line	64; "bingo.c"	GPIO = num_decena[dec];
-00007d   1283     bcf     0x03, 0x5        	BANKSEL	r0x1022
-00007e   0822     movf    0x22, 0x0        	MOVF	r0x1022,W
-00007f   3e96     addlw   0x96             	ADDLW	(_num_decena + 0)
-000080   00a6     movwf   0x26             	MOVWF	r0x1026
-000081   3003     movlw   0x03             	MOVLW	high (_num_decena + 0)
-000082   00a7     movwf   0x27             	MOVWF	r0x1027
-000083   0823     movf    0x23, 0x0        	MOVF	r0x1023,W
-000084   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
-000085   0f23     incfsz  0x23, 0x0        	INCFSZ	r0x1023,W
-000086   07a7     addwf   0x27, 0x1        	ADDWF	r0x1027,F
-000087   0826     movf    0x26, 0x0        	MOVF	r0x1026,W
-000088   00fe     movwf   0x7e             	MOVWF	STK01
-000089   0827     movf    0x27, 0x0        	MOVF	r0x1027,W
-00008a   00ff     movwf   0x7f             	MOVWF	STK00
-00008b   3080     movlw   0x80             	MOVLW	0x80
-                                           	PAGESEL	__gptrget1
-00008c   2332     call    0x0332           	CALL	__gptrget1
-                                           	PAGESEL	$
-00008d   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
-00008e   0085     movwf   0x05             	MOVWF	_GPIO
-                                           ;	.line	65; "bingo.c"	GPIO = num_unidad[unid];
-00008f   1283     bcf     0x03, 0x5        	BANKSEL	r0x1024
-000090   0824     movf    0x24, 0x0        	MOVF	r0x1024,W
-000091   3ea0     addlw   0xa0             	ADDLW	(_num_unidad + 0)
-000092   00a6     movwf   0x26             	MOVWF	r0x1026
-000093   3003     movlw   0x03             	MOVLW	high (_num_unidad + 0)
-000094   00a7     movwf   0x27             	MOVWF	r0x1027
-000095   0825     movf    0x25, 0x0        	MOVF	r0x1025,W
-000096   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
-000097   0f25     incfsz  0x25, 0x0        	INCFSZ	r0x1025,W
-000098   07a7     addwf   0x27, 0x1        	ADDWF	r0x1027,F
-000099   0826     movf    0x26, 0x0        	MOVF	r0x1026,W
-00009a   00fe     movwf   0x7e             	MOVWF	STK01
-00009b   0827     movf    0x27, 0x0        	MOVF	r0x1027,W
-00009c   00ff     movwf   0x7f             	MOVWF	STK00
-00009d   3080     movlw   0x80             	MOVLW	0x80
-                                           	PAGESEL	__gptrget1
-00009e   2332     call    0x0332           	CALL	__gptrget1
-                                           	PAGESEL	$
-00009f   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
-0000a0   0085     movwf   0x05             	MOVWF	_GPIO
-0000a1   287d     goto    0x007d           	GOTO	_00115_DS_
-                                           ;	.line	70; "bingo.c"	}
-0000a2   0008     return                   	RETURN	
+000232   2a2a     goto    0x022a           	GOTO	_00117_DS_
+                                           _00120_DS_:
+                                           ;	.line	90; "bingo.c"	while (GP3 == 1){
+000233   1683     bsf     0x03, 0x5        	BANKSEL	r0x1017
+000234   01aa     clrf    0x2a             	CLRF	r0x1017
+000235   1283     bcf     0x03, 0x5        	BANKSEL	_GPIObits
+000236   1d85     btfss   0x05, 0x3        	BTFSS	_GPIObits,3
+000237   2a3a     goto    0x023a           	GOTO	_00001_DS_
+000238   1683     bsf     0x03, 0x5        	BANKSEL	r0x1017
+000239   0aaa     incf    0x2a, 0x1        	INCF	r0x1017,F
+                                           _00001_DS_:
+00023a   1683     bsf     0x03, 0x5        	BANKSEL	r0x1017
+00023b   082a     movf    0x2a, 0x0        	MOVF	r0x1017,W
+                                           ;	.line	77; "bingo.c"	for (int i = 0; i < 16; i++) {
+00023c   3a01     xorlw   0x01             	XORLW	0x01
+00023d   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+00023e   2a33     goto    0x0233           	GOTO	_00120_DS_
+                                           _00128_DS_:
+00023f   1683     bsf     0x03, 0x5        	BANKSEL	r0x1014
+000240   0aa8     incf    0x28, 0x1        	INCF	r0x1014,F
+000241   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+000242   0aa9     incf    0x29, 0x1        	INCF	r0x1015,F
+000243   29f2     goto    0x01f2           	GOTO	_00127_DS_
+                                           _00129_DS_:
+                                           ;	.line	97; "bingo.c"	}
+000244   0008     return                   	RETURN	
                                            ; exit point of _main
 
                                            ;***
                                            ;  pBlock Stats: dbName = C
                                            ;***
                                            ;has an exit
-                                           ;functions called:
-                                           ;   __divsint
-                                           ;   __divsint
-                                           ;5 compiler assigned registers:
-                                           ;   r0x1020
+                                           ;9 compiler assigned registers:
+                                           ;   r0x1004
                                            ;   STK00
-                                           ;   r0x1021
-                                           ;   STK02
-                                           ;   STK01
+                                           ;   r0x1005
+                                           ;   r0x1006
+                                           ;   r0x1007
+                                           ;   r0x1008
+                                           ;   r0x1009
+                                           ;   r0x100A
+                                           ;   r0x100B
                                            ;; Starting pCode block
-                                           S_bingo__decena	code
-                                           _decena:
+                                           S_bingo__delay	code
+                                           _delay:
                                            ; 2 exit points
-                                           ;	.line	37; "bingo.c"	int decena(int numero){
-000370   1283     bcf     0x03, 0x5        	BANKSEL	r0x1020
-000371   00a1     movwf   0x21             	MOVWF	r0x1020
-000372   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-000373   00a0     movwf   0x20             	MOVWF	r0x1021
-                                           ;	.line	38; "bingo.c"	int decenas= numero/10;
-000374   300a     movlw   0x0a             	MOVLW	0x0a
-000375   00fd     movwf   0x7d             	MOVWF	STK02
-000376   3000     movlw   0x00             	MOVLW	0x00
-000377   00fe     movwf   0x7e             	MOVWF	STK01
-000378   0820     movf    0x20, 0x0        	MOVF	r0x1021,W
-000379   00ff     movwf   0x7f             	MOVWF	STK00
-00037a   0821     movf    0x21, 0x0        	MOVF	r0x1020,W
-                                           	PAGESEL	__divsint
-00037b   21c3     call    0x01c3           	CALL	__divsint
-                                           	PAGESEL	$
-00037c   1283     bcf     0x03, 0x5        	BANKSEL	r0x1020
-00037d   00a1     movwf   0x21             	MOVWF	r0x1020
-00037e   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-                                           ;	.line	39; "bingo.c"	return decenas;
-00037f   00a0     movwf   0x20             	MOVWF	r0x1021
-000380   00ff     movwf   0x7f             	MOVWF	STK00
-000381   0821     movf    0x21, 0x0        	MOVF	r0x1020,W
-                                           ;	.line	40; "bingo.c"	}
-000382   0008     return                   	RETURN	
-                                           ; exit point of _decena
+                                           ;	.line	99; "bingo.c"	void delay(unsigned int tiempo) //Se crea un tiempo de espera
+000343   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+000344   00ad     movwf   0x2d             	MOVWF	r0x1004
+000345   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+000346   00ac     movwf   0x2c             	MOVWF	r0x1005
+                                           ;	.line	104; "bingo.c"	for( i=0; i <tiempo; i ++)
+000347   01ae     clrf    0x2e             	CLRF	r0x1006
+000348   01af     clrf    0x2f             	CLRF	r0x1007
+                                           _00165_DS_:
+000349   1683     bsf     0x03, 0x5        	BANKSEL	r0x1004
+00034a   082d     movf    0x2d, 0x0        	MOVF	r0x1004,W
+00034b   022f     subwf   0x2f, 0x0        	SUBWF	r0x1007,W
+00034c   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+00034d   2b50     goto    0x0350           	GOTO	_00186_DS_
+00034e   082c     movf    0x2c, 0x0        	MOVF	r0x1005,W
+00034f   022e     subwf   0x2e, 0x0        	SUBWF	r0x1006,W
+                                           _00186_DS_:
+000350   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+000351   2b6d     goto    0x036d           	GOTO	_00167_DS_
+                                           ;;genSkipc:3307: created from rifx:00000000047A5780
+                                           ;	.line	105; "bingo.c"	for( j =0; j <1000; j ++);
+000352   30e8     movlw   0xe8             	MOVLW	0xe8
+000353   1683     bsf     0x03, 0x5        	BANKSEL	r0x1008
+000354   00b0     movwf   0x30             	MOVWF	r0x1008
+000355   3003     movlw   0x03             	MOVLW	0x03
+000356   00b1     movwf   0x31             	MOVWF	r0x1009
+                                           _00163_DS_:
+000357   30ff     movlw   0xff             	MOVLW	0xff
+000358   1683     bsf     0x03, 0x5        	BANKSEL	r0x1008
+000359   0730     addwf   0x30, 0x0        	ADDWF	r0x1008,W
+00035a   00b2     movwf   0x32             	MOVWF	r0x100A
+00035b   30ff     movlw   0xff             	MOVLW	0xff
+00035c   00b3     movwf   0x33             	MOVWF	r0x100B
+00035d   0831     movf    0x31, 0x0        	MOVF	r0x1009,W
+00035e   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+00035f   0f31     incfsz  0x31, 0x0        	INCFSZ	r0x1009,W
+000360   07b3     addwf   0x33, 0x1        	ADDWF	r0x100B,F
+000361   0832     movf    0x32, 0x0        	MOVF	r0x100A,W
+000362   00b0     movwf   0x30             	MOVWF	r0x1008
+000363   0833     movf    0x33, 0x0        	MOVF	r0x100B,W
+000364   00b1     movwf   0x31             	MOVWF	r0x1009
+000365   0833     movf    0x33, 0x0        	MOVF	r0x100B,W
+000366   0432     iorwf   0x32, 0x0        	IORWF	r0x100A,W
+000367   1d03     btfss   0x03, 0x2        	BTFSS	STATUS,2
+000368   2b57     goto    0x0357           	GOTO	_00163_DS_
+                                           ;	.line	104; "bingo.c"	for( i=0; i <tiempo; i ++)
+000369   0aae     incf    0x2e, 0x1        	INCF	r0x1006,F
+00036a   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+00036b   0aaf     incf    0x2f, 0x1        	INCF	r0x1007,F
+00036c   2b49     goto    0x0349           	GOTO	_00165_DS_
+                                           _00167_DS_:
+                                           ;	.line	106; "bingo.c"	}
+00036d   0008     return                   	RETURN	
+                                           ; exit point of _delay
 
                                            ;***
                                            ;  pBlock Stats: dbName = C
                                            ;***
                                            ;has an exit
                                            ;functions called:
+                                           ;   _num_display
+                                           ;   _num_display
+                                           ;2 compiler assigned registers:
+                                           ;   r0x1010
+                                           ;   r0x1011
+                                           ;; Starting pCode block
+                                           S_bingo__retener_display	code
+                                           _retener_display:
+                                           ; 2 exit points
+                                           ;	.line	60; "bingo.c"	retener=2; 
+000399   3002     movlw   0x02             	MOVLW	0x02
+00039a   1283     bcf     0x03, 0x5        	BANKSEL	_retener
+00039b   00d1     movwf   0x51             	MOVWF	_retener
+00039c   01d2     clrf    0x52             	CLRF	(_retener + 1)
+                                           _00109_DS_:
+                                           ;	.line	61; "bingo.c"	while (retener>0, retener--) 
+00039d   1283     bcf     0x03, 0x5        	BANKSEL	_retener
+00039e   0851     movf    0x51, 0x0        	MOVF	_retener,W
+00039f   1683     bsf     0x03, 0x5        	BANKSEL	r0x1010
+0003a0   00a4     movwf   0x24             	MOVWF	r0x1010
+0003a1   1283     bcf     0x03, 0x5        	BANKSEL	_retener
+0003a2   0852     movf    0x52, 0x0        	MOVF	(_retener + 1),W
+0003a3   1683     bsf     0x03, 0x5        	BANKSEL	r0x1011
+0003a4   00a5     movwf   0x25             	MOVWF	r0x1011
+0003a5   30ff     movlw   0xff             	MOVLW	0xff
+0003a6   1283     bcf     0x03, 0x5        	BANKSEL	_retener
+0003a7   07d1     addwf   0x51, 0x1        	ADDWF	_retener,F
+0003a8   1c03     btfss   0x03, 0x0        	BTFSS	STATUS,0
+0003a9   03d2     decf    0x52, 0x1        	DECF	(_retener + 1),F
+0003aa   1683     bsf     0x03, 0x5        	BANKSEL	r0x1011
+0003ab   0825     movf    0x25, 0x0        	MOVF	r0x1011,W
+0003ac   0424     iorwf   0x24, 0x0        	IORWF	r0x1010,W
+0003ad   1903     btfsc   0x03, 0x2        	BTFSC	STATUS,2
+0003ae   2bb1     goto    0x03b1           	GOTO	_00112_DS_
+                                           ;	.line	63; "bingo.c"	num_display();        
+                                           	PAGESEL	_num_display
+0003af   2292     call    0x0292           	CALL	_num_display
+                                           	PAGESEL	$
+0003b0   2b9d     goto    0x039d           	GOTO	_00109_DS_
+                                           _00112_DS_:
+                                           ;	.line	65; "bingo.c"	}
+0003b1   0008     return                   	RETURN	
+                                           ; exit point of _retener_display
+
+                                           ;***
+                                           ;  pBlock Stats: dbName = C
+                                           ;***
+                                           ;has an exit
+                                           ;functions called:
+                                           ;   __divsint
                                            ;   __modsint
+                                           ;   __gptrget1
+                                           ;   _delay
+                                           ;   __gptrget1
+                                           ;   _delay
+                                           ;   __divsint
                                            ;   __modsint
-                                           ;5 compiler assigned registers:
-                                           ;   r0x1020
-                                           ;   STK00
-                                           ;   r0x1021
+                                           ;   __gptrget1
+                                           ;   _delay
+                                           ;   __gptrget1
+                                           ;   _delay
+                                           ;7 compiler assigned registers:
                                            ;   STK02
                                            ;   STK01
+                                           ;   STK00
+                                           ;   r0x100C
+                                           ;   r0x100D
+                                           ;   r0x100E
+                                           ;   r0x100F
                                            ;; Starting pCode block
-                                           S_bingo__unidad	code
-                                           _unidad:
+                                           S_bingo__num_display	code
+                                           _num_display:
                                            ; 2 exit points
-                                           ;	.line	32; "bingo.c"	int unidad(int numero){
-000383   1283     bcf     0x03, 0x5        	BANKSEL	r0x1020
-000384   00a1     movwf   0x21             	MOVWF	r0x1020
-000385   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-000386   00a0     movwf   0x20             	MOVWF	r0x1021
-                                           ;	.line	33; "bingo.c"	int unidades = numero%10;
-000387   300a     movlw   0x0a             	MOVLW	0x0a
-000388   00fd     movwf   0x7d             	MOVWF	STK02
-000389   3000     movlw   0x00             	MOVLW	0x00
-00038a   00fe     movwf   0x7e             	MOVWF	STK01
-00038b   0820     movf    0x20, 0x0        	MOVF	r0x1021,W
-00038c   00ff     movwf   0x7f             	MOVWF	STK00
-00038d   0821     movf    0x21, 0x0        	MOVF	r0x1020,W
-                                           	PAGESEL	__modsint
-00038e   2229     call    0x0229           	CALL	__modsint
+                                           ;	.line	48; "bingo.c"	dec=numero/10;
+000292   300a     movlw   0x0a             	MOVLW	0x0a
+000293   00fd     movwf   0x7d             	MOVWF	STK02
+000294   3000     movlw   0x00             	MOVLW	0x00
+000295   00fe     movwf   0x7e             	MOVWF	STK01
+000296   1283     bcf     0x03, 0x5        	BANKSEL	_numero
+000297   084f     movf    0x4f, 0x0        	MOVF	_numero,W
+000298   00ff     movwf   0x7f             	MOVWF	STK00
+000299   0850     movf    0x50, 0x0        	MOVF	(_numero + 1),W
+                                           	PAGESEL	__divsint
+00029a   2122     call    0x0122           	CALL	__divsint
                                            	PAGESEL	$
-00038f   1283     bcf     0x03, 0x5        	BANKSEL	r0x1020
-000390   00a1     movwf   0x21             	MOVWF	r0x1020
-000391   087f     movf    0x7f, 0x0        	MOVF	STK00,W
-                                           ;	.line	34; "bingo.c"	return unidades;
-000392   00a0     movwf   0x20             	MOVWF	r0x1021
-000393   00ff     movwf   0x7f             	MOVWF	STK00
-000394   0821     movf    0x21, 0x0        	MOVF	r0x1020,W
-                                           ;	.line	35; "bingo.c"	}
-000395   0008     return                   	RETURN	
-                                           ; exit point of _unidad
+00029b   1683     bsf     0x03, 0x5        	BANKSEL	r0x100C
+00029c   00a1     movwf   0x21             	MOVWF	r0x100C
+00029d   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+00029e   00a0     movwf   0x20             	MOVWF	r0x100D
+                                           ;	.line	49; "bingo.c"	unid=numero%10;
+00029f   300a     movlw   0x0a             	MOVLW	0x0a
+0002a0   00fd     movwf   0x7d             	MOVWF	STK02
+0002a1   3000     movlw   0x00             	MOVLW	0x00
+0002a2   00fe     movwf   0x7e             	MOVWF	STK01
+0002a3   1283     bcf     0x03, 0x5        	BANKSEL	_numero
+0002a4   084f     movf    0x4f, 0x0        	MOVF	_numero,W
+0002a5   00ff     movwf   0x7f             	MOVWF	STK00
+0002a6   0850     movf    0x50, 0x0        	MOVF	(_numero + 1),W
+                                           	PAGESEL	__modsint
+0002a7   2188     call    0x0188           	CALL	__modsint
+                                           	PAGESEL	$
+0002a8   1683     bsf     0x03, 0x5        	BANKSEL	r0x100E
+0002a9   00a3     movwf   0x23             	MOVWF	r0x100E
+0002aa   087f     movf    0x7f, 0x0        	MOVF	STK00,W
+                                           ;	.line	51; "bingo.c"	GPIO=(num_unidad[unid]); 
+0002ab   00a2     movwf   0x22             	MOVWF	r0x100F
+0002ac   3ebc     addlw   0xbc             	ADDLW	(_num_unidad + 0)
+0002ad   00a2     movwf   0x22             	MOVWF	r0x100F
+0002ae   0823     movf    0x23, 0x0        	MOVF	r0x100E,W
+0002af   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+0002b0   0f23     incfsz  0x23, 0x0        	INCFSZ	r0x100E,W
+0002b1   3e03     addlw   0x03             	ADDLW	high (_num_unidad + 0)
+0002b2   00a3     movwf   0x23             	MOVWF	r0x100E
+0002b3   0822     movf    0x22, 0x0        	MOVF	r0x100F,W
+0002b4   00fe     movwf   0x7e             	MOVWF	STK01
+0002b5   0823     movf    0x23, 0x0        	MOVF	r0x100E,W
+0002b6   00ff     movwf   0x7f             	MOVWF	STK00
+0002b7   3080     movlw   0x80             	MOVLW	0x80
+                                           	PAGESEL	__gptrget1
+0002b8   2330     call    0x0330           	CALL	__gptrget1
+                                           	PAGESEL	$
+0002b9   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0002ba   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	52; "bingo.c"	delay(1);
+0002bb   3001     movlw   0x01             	MOVLW	0x01
+0002bc   00ff     movwf   0x7f             	MOVWF	STK00
+0002bd   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0002be   2343     call    0x0343           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	53; "bingo.c"	GPIO=(num_decena[dec]);
+0002bf   1683     bsf     0x03, 0x5        	BANKSEL	r0x100D
+0002c0   0820     movf    0x20, 0x0        	MOVF	r0x100D,W
+0002c1   3eb2     addlw   0xb2             	ADDLW	(_num_decena + 0)
+0002c2   00a0     movwf   0x20             	MOVWF	r0x100D
+0002c3   0821     movf    0x21, 0x0        	MOVF	r0x100C,W
+0002c4   1803     btfsc   0x03, 0x0        	BTFSC	STATUS,0
+0002c5   0f21     incfsz  0x21, 0x0        	INCFSZ	r0x100C,W
+0002c6   3e03     addlw   0x03             	ADDLW	high (_num_decena + 0)
+0002c7   00a1     movwf   0x21             	MOVWF	r0x100C
+0002c8   0820     movf    0x20, 0x0        	MOVF	r0x100D,W
+0002c9   00fe     movwf   0x7e             	MOVWF	STK01
+0002ca   0821     movf    0x21, 0x0        	MOVF	r0x100C,W
+0002cb   00ff     movwf   0x7f             	MOVWF	STK00
+0002cc   3080     movlw   0x80             	MOVLW	0x80
+                                           	PAGESEL	__gptrget1
+0002cd   2330     call    0x0330           	CALL	__gptrget1
+                                           	PAGESEL	$
+0002ce   1283     bcf     0x03, 0x5        	BANKSEL	_GPIO
+0002cf   0085     movwf   0x05             	MOVWF	_GPIO
+                                           ;	.line	54; "bingo.c"	delay(1);                     
+0002d0   3001     movlw   0x01             	MOVLW	0x01
+0002d1   00ff     movwf   0x7f             	MOVWF	STK00
+0002d2   3000     movlw   0x00             	MOVLW	0x00
+                                           	PAGESEL	_delay
+0002d3   2343     call    0x0343           	CALL	_delay
+                                           	PAGESEL	$
+                                           ;	.line	56; "bingo.c"	}
+0002d4   0008     return                   	RETURN	
+                                           ; exit point of _num_display
 
 
                                            ;	code size estimation:
-                                           ;	  168+   49 =   217 instructions (  532 byte)
+                                           ;	  196+   55 =   251 instructions (  612 byte)
 
                                            	end
